@@ -23,5 +23,8 @@ Entendemos a importância dos hospitais e instituições de saúde na nossa soci
 - Spring Boot 3.1.3
 - MySQL
 
+## Insomnia Test API
+
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Test%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fandersonjuniorz%2Fhospital-management-system%2Fdevelopment%2FInsomnia%2FInsomnia_2023-09-18.json)
 
 
