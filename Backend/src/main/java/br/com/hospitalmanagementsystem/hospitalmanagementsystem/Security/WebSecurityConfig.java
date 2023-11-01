@@ -26,13 +26,16 @@ public class WebSecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize -> authorize
-                        /*.requestMatchers("/static/**", "/layout/**").permitAll()*/
+
+                        //Documentations
+                        .requestMatchers(HttpMethod.GET,"/swagger-ui/**", "/v3/api-docs/**").permitAll()
 
                         //Authentication rotes
                         .requestMatchers(HttpMethod.POST,"api/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST,"api/auth/cadastrar-paciente").permitAll()
                         .requestMatchers(HttpMethod.POST,"api/auth/cadastrar-usuario").hasRole("ADMIN")
 
+                        //Users
                         .requestMatchers(HttpMethod.GET,"/usuarios").hasRole("ADMIN")
 
 

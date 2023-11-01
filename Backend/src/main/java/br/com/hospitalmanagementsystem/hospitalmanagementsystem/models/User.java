@@ -1,5 +1,6 @@
 package br.com.hospitalmanagementsystem.hospitalmanagementsystem.models;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,18 +19,23 @@ import java.util.List;
 @AllArgsConstructor
 @Table(name = "tb_users")
 @EqualsAndHashCode(of = "id")
+@JsonPropertyOrder({"username", "email", "password", "role"})
 public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
+    @JsonPropertyOrder("username")
     private String username;
 
+    @JsonPropertyOrder("email")
     private String email;
 
+    @JsonPropertyOrder("password")
     private String password;
 
+    @JsonPropertyOrder("role")
     private UserRole role;
 
     public User(String username, String email, String password, UserRole role){
