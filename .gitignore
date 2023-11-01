@@ -17,6 +17,3 @@ logs/
 *.iml
 *.iws
 *.ipr
-
-# Arquivo application.properties
-/src/main/resources/application.properties
