@@ -1,4 +1,22 @@
 # Default ignored files
 .idea
+/target/
 /shelf/
 /workspace.xml
+
+.gradle/
+build/
+
+# Arquivos específicos do sistema
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+*.iml
+*.iws
+*.ipr
+
+# Arquivo application.properties
+/src/main/resources/application.properties
